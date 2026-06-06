@@ -2,9 +2,9 @@ import streamlit as st
 from PIL import Image
 
 # --- GENERAL SETTINGS ---
-PAGE_TITLE = "Digital CV | Egezon Baruti"
+PAGE_TITLE = "Digital CV | Dion Gurgule"
 PAGE_ICON = ":wave:"
-NAME = "Egezon Baruti"
+NAME = "Dion Gurgule"
 DESCRIPTION = """
 Data Scientist specializing in spatial-sensor data and data-driven decision-making.
 """
