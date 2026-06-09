@@ -1,9 +1,9 @@
 [theme]
 # A dark-blue primary accent color for interactive elements
-primaryColor = "#0da13c"
+primaryColor = "#a1750d"
 
 # A light "white-blue" background color for the main content area
-backgroundColor = "#f5965f"
+backgroundColor = "#eee2dc"
 
 # A lighter background color for the sidebar and other components
 secondaryBackgroundColor = "#ffffff"
