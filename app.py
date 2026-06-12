@@ -1,5 +1,7 @@
 import streamlit as st
 from PIL import Image
+import pandas as pd
+import numpy as np
 
 # --- GENERAL SETTINGS ---
 PAGE_TITLE = "Digital CV | Dion Gurgule"
@@ -24,7 +26,7 @@ with open(resume_file, "rb") as pdf_file:
 profile_pic = Image.open(profile_pic_file)
 
 # Sidebar navigation
-page = st.sidebar.radio("Navigate", ["Home", "About"])
+page = st.sidebar.radio("Navigate", ["Home", "About", "Homework"])
 
 if page == "Home":
     # --- HERO SECTION ---
@@ -145,3 +147,29 @@ elif page == "About":
     # Show LinkedIn and Email only on the About page
     st.write("📫", EMAIL)
     st.write(f"Feel free to connect with me on [LinkedIn]({LINKEDIN_URL}).")
+elif page == "Homework":
+    st.title("Homework")
+    st.write("""
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since 1966,
+              when designers at Letraset and James Mosley, the librarian at St Bride Printing Library,
+              took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's
+              Body Type sheets. It has survived not only many decades, but also the leap into 
+              electronic typesetting, remaining essentially unchanged. It was popularised thanks 
+             to these sheets and more recently with desktop publishing software including versions of Lorem Ipsum.
+    """)
+    st.subheader("Widgets")
+    x = st.slider('x')  # 👈 this is a widget
+    st.write(x, 'to the power od 4 is', pow(x, 4))
+
+    st.text_input("Your name", key="name")
+
+    if st.checkbox('Show dataframe'):
+        chart_data = pd.DataFrame(
+        np.random.randn(12, 3),
+        columns=['a', 'b', 'c'])
+
+        chart_data
+
+    if st.checkbox('I Read your cv'):
+          "Thank you for reading my CV", st.session_state.name
