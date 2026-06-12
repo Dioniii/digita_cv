@@ -26,7 +26,7 @@ with open(resume_file, "rb") as pdf_file:
 profile_pic = Image.open(profile_pic_file)
 
 # Sidebar navigation
-page = st.sidebar.radio("Navigate", ["Home", "About", "Homework"])
+page = st.sidebar.radio("Navigate", ["Home", "About", "Projects"])
 
 if page == "Home":
     # --- HERO SECTION ---
@@ -84,7 +84,27 @@ if page == "Home":
 - ● Maintained data confidentiality and adhered to company policies and regulatory standards 
 
 """)
-# --- Projects ---
+
+elif page == "About":
+    st.title("About Me")
+    st.write("""
+    I am a computer science student with a strong passion for learning 
+    everything around data science, AI, machine learning. I am also
+    highly intrigued by AI agents and implementing them, models such as
+    ClawdBot, Hermes Agent spike my intrests and allow me to explore the future of 
+    such technologies.
+ 
+    Throughout my studies I have taken part in different projects that allowed me to 
+    build and improve my skills in Java, PHP, Python and also taught me
+    best practices in implementing different system architectures
+    payment methods and delivering a full system ready for businesses to deploy.
+    """)
+
+    # Show LinkedIn and Email only on the About page
+    st.write("📫", EMAIL)
+    st.write(f"Feel free to connect with me on [LinkedIn]({LINKEDIN_URL}).")
+
+elif page == "Projects":
     st.write("\n")
     st.subheader("Projects")
     st.write("---")
@@ -128,48 +148,28 @@ A small python script that scrapes sites like "KosovaJobs" and "Superpuna" for j
 automatic messaging via a Discord bot setup.
 """
     )
+    #st.title("Homework")
+    #st.write("""
+    #Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    #          Lorem Ipsum has been the industry's standard dummy text ever since 1966,
+    #          when designers at Letraset and James Mosley, the librarian at St Bride Printing Library,
+    #          took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's
+    #          Body Type sheets. It has survived not only many decades, but also the leap into 
+    #          electronic typesetting, remaining essentially unchanged. It was popularised thanks 
+    #        to these sheets and more recently with desktop publishing software including versions of Lorem Ipsum.
+    #""")
+    #st.subheader("Widgets")
+    #x = st.slider('x')  # 👈 this is a widget
+    #st.write(x, 'to the power od 4 is', pow(x, 4))
 
-elif page == "About":
-    st.title("About Me")
-    st.write("""
-    I am a computer science student with a strong passion for learning 
-    everything around data science, AI, machine learning. I am also
-    highly intrigued by AI agents and implementing them, models such as
-    ClawdBot, Hermes Agent spike my intrests and allow me to explore the future of 
-    such technologies.
- 
-    Throughout my studies I have taken part in different projects that allowed me to 
-    build and improve my skills in Java, PHP, Python and also taught me
-    best practices in implementing different system architectures
-    payment methods and delivering a full system ready for businesses to deploy.
-    """)
+    #st.text_input("Your name", key="name")
 
-    # Show LinkedIn and Email only on the About page
-    st.write("📫", EMAIL)
-    st.write(f"Feel free to connect with me on [LinkedIn]({LINKEDIN_URL}).")
-elif page == "Homework":
-    st.title("Homework")
-    st.write("""
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since 1966,
-              when designers at Letraset and James Mosley, the librarian at St Bride Printing Library,
-              took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's
-              Body Type sheets. It has survived not only many decades, but also the leap into 
-              electronic typesetting, remaining essentially unchanged. It was popularised thanks 
-             to these sheets and more recently with desktop publishing software including versions of Lorem Ipsum.
-    """)
-    st.subheader("Widgets")
-    x = st.slider('x')  # 👈 this is a widget
-    st.write(x, 'to the power od 4 is', pow(x, 4))
+    #if st.checkbox('Show dataframe'):
+    #    chart_data = pd.DataFrame(
+    #    np.random.randn(12, 3),
+    #    columns=['a', 'b', 'c'])
 
-    st.text_input("Your name", key="name")
+    #    chart_data
 
-    if st.checkbox('Show dataframe'):
-        chart_data = pd.DataFrame(
-        np.random.randn(12, 3),
-        columns=['a', 'b', 'c'])
-
-        chart_data
-
-    if st.checkbox('I Read your cv'):
-          "Thank you for reading my CV", st.session_state.name
+    #if st.checkbox('I Read your cv'):
+    #      "Thank you for reading my CV", st.session_state.name
