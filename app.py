@@ -4,7 +4,7 @@ from components.sidebar import get_selected_page
 from config import PAGE_ICON, PAGE_TITLE
 from views.about import render_about
 from views.home import render_home
-from views.lecture_12 import render_lecture_12
+from views.lessons import render_lessons
 from views.projects import render_projects
 
 
@@ -16,7 +16,7 @@ if page == "Home":
     render_home()
 elif page == "About":
     render_about()
+elif page == "Lessons":
+    render_lessons()
 elif page == "Projects":
     render_projects()
-elif page == "Lecture 12":
-    render_lecture_12()

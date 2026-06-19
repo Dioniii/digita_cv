@@ -18,5 +18,4 @@ LINKEDIN_URL = "https://www.linkedin.com/in/diongurgule"
 RESUME_FILE = ASSETS_DIR / "CV - English.pdf"
 PROFILE_PIC_FILE = ASSETS_DIR / "profile-pic.png"
 
-MAIN_PAGES = ["Home", "About", "Projects"]
-LECTURE_PAGES = ["Lecture 12"]
+MAIN_PAGES = ["Home", "Lessons", "Projects", "About"]
